@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //processamento
+        function calcularPrecoMacas(quantidade) {
+            const precoUnitario = 1.30;
+            const precoUnitarioDesconto = 1.00;
+            const quantidadeDuzia = 12;
+          
+            if (quantidade >= quantidadeDuzia) {
+              return quantidade * precoUnitarioDesconto;
+            } else {
+              return quantidade * precoUnitario;
+            }
+          }
+          
+          //entrada
+          let quantidadeComprada = prompt("Quantas maçãs você deseja comprar?");
+
+          quantidadeComprada = parseInt(quantidadeComprada);
+          
+          const valorTotal = calcularPrecoMacas(quantidadeComprada);
+          
+          // saida
+          alert(`O valor total a ser pago por ${quantidadeComprada} maçãs é R$ ${valorTotal.toFixed(2)}`);
+    </script>
+</body>
+</html>
