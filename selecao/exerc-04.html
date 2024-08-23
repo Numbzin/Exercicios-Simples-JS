@@ -7,19 +7,6 @@
   </head>
   <body>
     <script>
-      //4. Cálculo da média semestral e do resultado final
-      // Instrução: Melhore o programa anterior para que, além de exibir a mensagem de aprovação,
-      // ele também exibe uma mensagem de falha se a média for menor que 6,0.
-
-      //entrada
-      function nota() {
-        return parseFloat(prompt("Qual a nota?"));
-      }
-
-      function nota2() {
-        return parseFloat(prompt("Qual a segunda nota?"));
-      }
-
       //processamento
       function calcResultado(media) {
         if (media >= 6.0) {
@@ -32,12 +19,11 @@
       function exibirResultado(mensagem) {
         alert(mensagem);
       }
-      let primeiraNota = nota();
-      let segundaNota = nota2();
-      let media = (primeiraNota + segundaNota) / 2;
-      let resultado = calcResultado(media);
 
-      //saida
+      // Saída e processamento
+      let media = (parseFloat(prompt("Qual a primeira nota?")) + parseFloat(prompt("Qual a segunda nota?"))) / 2;
+      let resultado = calcResultado(media);
+      
       exibirResultado(resultado);
     </script>
   </body>
