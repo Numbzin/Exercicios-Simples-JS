@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 8. Verificação da idade de voto Declaração: Crie um programa que verifique se uma pessoa pode votar com base no ano de seu nascimento. Considere que a idade mínima para votar é de 16 anos.
+
+      //entrada
+      let idade = parseFloat(prompt("Qual a sua idade?"));
+
+      //processamento
+      let idademinima = 16;
+      if (idade < idademinima) {
+        resposta = "Você não pode votar.";
+      } else {
+        resposta = "Você pode votar.";
+      }
+
+      //saida
+      alert(resposta);
+    </script>
+  </body>
+</html>
