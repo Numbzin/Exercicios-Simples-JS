@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 1 SIMPLES</title>
+  </head>
+  <body>
+    <script>
+      // 1) Escreva um programa para ler o raio de um círculo, calcular e escrever a sua área (Pi * (raio * raio))
+
+      // entrada
+      let raio = prompt("Qual o raio?");
+
+      // processamento
+      function calcAreaCirculo(valorRaio) {
+        const PI = 3.14;
+        return PI * (valorRaio * valorRaio);
+      }
+      let area = calcAreaCirculo(raio);
+      // saida
+      alert("Area do circulo: " + calcAreaCirculo(raio));
+    </script>
+  </body>
+</html>
