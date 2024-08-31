@@ -1,0 +1,40 @@
+<script>
+  //7) A equipe Benneton-Ford deseja calcular o número mínimo de litros que deverá colocar no tanque de seu carro para que ele possa percorrer um determinado número de voltas até o primeiro reabastecimento. Escreva um programa que leia o comprimento da pista (em metros), o número total de voltas a serem percorridas no grande prêmio, o número de abastecimentos desejados e o consumo de combustível do carro (em Km/L). Calcular e escrever o número mínimo de litros necessários para percorrer até o primeiro reabastecimento. OBS: Considere que o número de voltas entre os abastecimentos é o mesmo.
+
+  //entrada
+  let comprimentoPista = parseFloat(
+    prompt("Comprimento da pista (em metros)?")
+  );
+  let numeroVoltas = parseFloat(prompt("Quantas voltas?"));
+  let numeroAbastecimentos = parseFloat(
+    prompt("Quantas vezes o carro precisa ser reabastecido?")
+  );
+  let consumoCombustivel = parseFloat(
+    prompt("Qual o consumo do combustivel em Km/L?")
+  );
+
+  //processamento
+  function calcMinimoLitros(
+    comprimentoPista,
+    numeroVoltas,
+    numeroAbastecimentos,
+    consumoCombustivel
+  ) {
+    let distanciaTotal = (comprimentoPista / 1000) * numeroVoltas;
+    let voltas = numeroVoltas / (numeroAbastecimentos + 1);
+    let distanciaEntreAbastecimentos = (comprimentoPista / 1000) * voltas;
+    let litrosNecessarios = distanciaEntreAbastecimentos / consumoCombustivel;
+    return litrosNecessarios;
+  }
+
+  //saida
+  alert(
+    "Número mínimo de litros necessários para percorrer até o primeiro reabastecimento: " +
+      calcMinimoLitros(
+        comprimentoPista,
+        numeroVoltas,
+        numeroAbastecimentos,
+        consumoCombustivel
+      )
+  );
+</script>
