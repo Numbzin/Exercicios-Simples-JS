@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //75) Elabore um algoritmo que gere e escreve os números ímpares entre números entre 100 e 200.
+      function impares(limite = 100) {
+        let response = "";
+        for (let numero = 100; numero <= limite; numero++) {
+          if (numero % 2 !== 0) {
+            response += `${numero} impar <br>`;
+          }
+        }
+        return response;
+      }
+
+      //saida
+      document.write(impares(200));
+    </script>
+  </body>
+</html>
