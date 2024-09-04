@@ -11,6 +11,30 @@
       //· Encontre o maior valor
       //· Encontre o menor valor
       //· Calcule a média dos números lidos
+
+      // entrada
+      let maior = 0;
+      let menor = Infinity;
+      let soma = 0;
+
+      // processamento
+      for (let i = 0; i < 50; i++) {
+        let valor = parseInt(prompt("Digite um valor inteiro e positivo:"));
+        if (valor > maior) {
+          maior = valor;
+        }
+        if (valor < menor) {
+          menor = valor;
+        }
+        soma += valor;
+      }
+
+      let media = soma / 50;
+
+      // saída
+      document.write(`Maior valor: ${maior} <br>`);
+      document.write(`Menor valor: ${menor} <br>`);
+      document.write(`Média dos valores: ${media}`);      
     </script>
   </body>
 </html>
