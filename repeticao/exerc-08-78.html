@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //78) Tem-se um conjunto de dados contendo a altura e o sexo (masculino, feminino) de 50 pessoas. Fazer um algoritmo que calcule e escreva:
+      //• A maior e a menor altura do grupo;
+      //• A média de altura das mulheres;
+      //• O número de homens.
+
+      let AlturaMulheres = 0;
+      let contMulheres = 0;
+      let numHomens = 0;
+      let maiorAlt = -Infinity;
+      let menorAlt = Infinity;
+
+      for (let calc = 0; calc < 3; calc++) {
+        let altura = parseFloat(prompt("Digite sua altura (em metros):"));
+        let sexo = prompt("Digite seu sexo (F ou M):");
+
+        if (altura > maiorAlt) {
+          maiorAlt = altura;
+        }
+
+        if (altura < menorAlt) {
+          menorAlt = altura;
+        }
+
+        if (sexo == "F" || sexo == "f") {
+          AlturaMulheres += altura;
+          contMulheres++;
+        } else if (sexo == "M" || sexo == "m") {
+          numHomens++;
+        }
+      }
+
+      let mediaAlturaMulheres =
+        contMulheres > 0 ? AlturaMulheres / contMulheres : 0;
+
+      // saída
+      document.write(`Maior altura: ${maiorAlt} <br>`);
+      document.write(`Menor altura: ${menorAlt} <br>`);
+      document.write(`Media de altura F: ${mediaAlturaMulheres} <br>`);
+      document.write(`Numero M: ${numHomens} <br>`);
+    </script>
+  </body>
+</html>
